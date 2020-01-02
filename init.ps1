@@ -9,5 +9,5 @@ else{
 }
 
 choco install git -y
-
+git clone https://github.com/ramblingreece/Choco-Installs.git installs
 # TODO: Add enable of windows features as needed. https://chocolatey.org/docs/commands-install#windows-features
