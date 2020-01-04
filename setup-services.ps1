@@ -6,3 +6,5 @@ if ((Get-LocalUser -Name "user" -ErrorAction Ignore).Enabled){
     $UserAccount = Get-LocalUser -Name "user"
     $UserAccount | Set-LocalUser -Password $Password    
 }
+Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" –Value 0
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
